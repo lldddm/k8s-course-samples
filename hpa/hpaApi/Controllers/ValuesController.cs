@@ -17,7 +17,7 @@ namespace hpaApi.Controllers
         public ActionResult<IEnumerable<string>> Get()
         {   
             var stringDistance = new StringDistance();
-            var  watch =new Stopwatch();
+            var  watch = new Stopwatch();
             const long count = 100;
             const int length = 100;
             string comparestring = stringDistance.GenerateRandomString(length);

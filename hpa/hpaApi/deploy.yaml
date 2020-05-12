@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: hpa-api
-        image: 	registry.cn-hangzhou.aliyuncs.com/jessetalk/hap-api
+        image: registry.cn-shenzhen.aliyuncs.com/practice-luoyh/hpa-api
         resources: 
           requests:
             cpu: 200m
@@ -28,6 +28,7 @@ spec:
         ports:
         - containerPort: 80
         imagePullPolicy: Always
+
 ---
 
 kind: Service
@@ -42,4 +43,3 @@ spec:
       targetPort: 80
   selector:
     name: hpa-api
-
